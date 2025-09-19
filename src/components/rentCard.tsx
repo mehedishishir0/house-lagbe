@@ -65,7 +65,7 @@ const RentCard: React.FC<RentCardProps> = ({ data, isWishlisted = false, onToggl
                 )}
 
             </CardContent>
-            <Button className="w-full mt-2 text-sm rounded-none sm:text-base">View Details</Button>
+            <Button className="w-full mt-2 bg-gradient-to-br from-black to-blue-950 text-sm rounded-none sm:text-base">View Details</Button>
         </Card>
     );
 };

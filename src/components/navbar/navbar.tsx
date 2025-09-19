@@ -10,7 +10,10 @@ const Navbar = () => {
     <nav className="fixed top-2 inset-x-2 sm:inset-x-4 h-16 bg-background border dark:border-slate-700/70 container mx-auto rounded-full shadow-sm z-50">
       <div className="h-full flex items-center justify-between px-2 sm:px-4">
         {/* Logo */}
-        <h1 className="text-lg sm:text-xl font-bold">House </h1>
+        <h1 className="text-4xl font-bold bg-gradient-to-br from-black to-blue-950 bg-clip-text text-transparent">
+          House Lagbe
+        </h1>
+
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:flex gap-4" />
@@ -32,7 +35,7 @@ const Navbar = () => {
           >
             Sign In
           </Button>
-          <Button className="rounded-full text-sm sm:text-base">
+          <Button className="rounded-full bg-gradient-to-br from-black to-blue-950 text-sm sm:text-base">
             Get Started
           </Button>
 

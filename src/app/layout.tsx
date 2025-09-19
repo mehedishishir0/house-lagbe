@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/provider/query-provider";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar/navbar";
 
 
 const geistSans = DM_Sans({
@@ -28,7 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} antialiased`}
       >
         <QueryProvider>
+           <Navbar/>
           {children}
+          <Footer/>
         </QueryProvider>
       </body>
     </html>
