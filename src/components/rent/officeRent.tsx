@@ -6,7 +6,7 @@ import RentCard from "../rentCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const NewRent = () => {
+const OfficeRent = () => {
 
 
     const rentListings: RentListingFlat[] = [
@@ -211,7 +211,7 @@ const NewRent = () => {
 
     return (
         <section className="container py-8">
-            <h2 className="text-xl font-bold mb-4">New Rents</h2>
+            <h2 className="text-xl font-bold mb-4">Office </h2>
 
             <div className="relative">
                 {/* Slider */}
@@ -257,4 +257,4 @@ const NewRent = () => {
     );
 };
 
-export default NewRent;
+export default OfficeRent;

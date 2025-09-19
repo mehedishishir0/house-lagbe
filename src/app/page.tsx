@@ -1,13 +1,25 @@
+import RecentBlog from "@/components/blog/recentBlog";
 import Hero from "@/components/hero/hero";
 import Navbar from "@/components/navbar/navbar";
 import NewRent from "@/components/rent/newRent";
+import OfficeRent from "@/components/rent/officeRent";
 
 export default function Home() {
   return (
     <div>
-      <Navbar  />
-      <Hero/>
-      <NewRent/>
+      <Navbar />
+      <Hero />
+      <div>
+        <h1 className="text-2xl font-bold text-center mt-7 mb-3">
+          House Lagbe - The Best Platform for Renting Houses
+        </h1>
+        <p className="text-center text-gray-600">
+          Explore all types of rental homes and find your perfect stay
+        </p>
+      </div>
+      <NewRent />
+      <OfficeRent />
+      <RecentBlog/>
     </div>
   );
 }

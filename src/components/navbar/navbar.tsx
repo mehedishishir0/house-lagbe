@@ -7,10 +7,10 @@ import { NavigationSheet } from "./navigation-sheet";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-2 inset-x-2 sm:inset-x-4 h-16 bg-background border dark:border-slate-700/70 max-w-screen-xl mx-auto rounded-full shadow-sm z-50">
+    <nav className="fixed top-2 inset-x-2 sm:inset-x-4 h-16 bg-background border dark:border-slate-700/70 container mx-auto rounded-full shadow-sm z-50">
       <div className="h-full flex items-center justify-between px-2 sm:px-4">
         {/* Logo */}
-        <h1 className="text-lg sm:text-xl font-bold">House Rent</h1>
+        <h1 className="text-lg sm:text-xl font-bold">House </h1>
 
         {/* Desktop Menu */}
         <NavMenu className="hidden md:flex gap-4" />
