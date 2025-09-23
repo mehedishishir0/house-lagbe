@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -29,12 +30,14 @@ const Navbar = () => {
 
         {/* Right Side */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <Button
-            variant="outline"
-            className="hidden sm:inline-flex rounded-full text-sm sm:text-base"
-          >
-            Sign In
-          </Button>
+          <Link href="/login">
+            <Button
+              variant="outline"
+              className="hidden sm:inline-flex rounded-full text-sm sm:text-base"
+            >
+              Sign In
+            </Button>
+          </Link>
           <Button className="rounded-full bg-gradient-to-br from-black to-blue-950 text-sm sm:text-base">
             Get Started
           </Button>

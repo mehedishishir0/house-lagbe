@@ -1,13 +1,14 @@
 import RecentBlog from "@/components/blog/recentBlog";
 import CTA from "@/components/cta";
 import Hero from "@/components/hero/hero";
+import PageTransition from "@/components/PageTransition";
 import NewRent from "@/components/rent/newRent";
 import OfficeRent from "@/components/rent/officeRent";
 
 export default function Home() {
   return (
+        <PageTransition>
     <div>
-     
       <Hero />
       <div>
         <h1 className="text-2xl font-bold text-center mt-7 mb-3">
@@ -19,8 +20,9 @@ export default function Home() {
       </div>
       <NewRent />
       <OfficeRent />
-      <RecentBlog/>
-      <CTA/>
+      <RecentBlog />
+      <CTA />
     </div>
+        </PageTransition>
   );
 }
