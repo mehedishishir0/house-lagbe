@@ -7,22 +7,22 @@ import OfficeRent from "@/components/rent/officeRent";
 
 export default function Home() {
   return (
-        <PageTransition>
-    <div>
-      <Hero />
+    <PageTransition>
       <div>
-        <h1 className="text-2xl font-bold text-center mt-7 mb-3">
-          House Lagbe - The Best Platform for Renting Houses
-        </h1>
-        <p className="text-center text-gray-600">
-          Explore all types of rental homes and find your perfect stay
-        </p>
+        <Hero />
+        <div>
+          <h1 className="text-2xl font-bold text-center mt-7 mb-3">
+            House Lagbe - The Best Platform for Renting Houses
+          </h1>
+          <p className="text-center text-gray-600">
+            Explore all types of rental homes and find your perfect stay
+          </p>
+        </div>
+        <NewRent />
+        <OfficeRent />
+        <RecentBlog />
+        <CTA />
       </div>
-      <NewRent />
-      <OfficeRent />
-      <RecentBlog />
-      <CTA />
-    </div>
-        </PageTransition>
+    </PageTransition>
   );
 }
