@@ -133,7 +133,8 @@ export default function LoginformBody() {
                         <Button type="submit" className="w-full bg-gradient-to-br from-black to-blue-950 hover:bg-gradient-to-br hover:from-black hover:to-blue-950/80">Submit</Button>
                     </form>
                 </Form>
-                <p className="text-center text-sm text-gray-500 font-medium">Don&apos;t have an account? <Link href="/sign-up" className="text-blue-600">Sign Up</Link></p>
+                <p className="text-center mb-3 text-sm text-gray-500 font-medium">Don&apos;t have an account?{" "} <Link href="/sign-up" className="text-blue-950">Sign Up</Link></p>
+                <p className="text-center text-sm text-gray-500 font-medium">forgot password? {" "}<Link href="/reset-email" className="text-blue-950">Reset Password</Link></p>
             </CardContent>
         </Card >
 
