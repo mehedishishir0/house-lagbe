@@ -8,7 +8,16 @@
   }
 }
 
+/* NProgress custom gradient */
+#nprogress .bar {
+  background: linear-gradient(to right, black, white, #0a0e2e); /* black → white → blue-950 */
+  height: 3px !important;
+}
 
+/* Hide spinner if needed */
+#nprogress .spinner {
+  display: none !important;
+}
 
 @layer base {
   :root {
