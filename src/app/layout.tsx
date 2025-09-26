@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/provider/query-provider";
-
+import TopLoader from 'nextjs-toploader'
 
 
 const geistSans = DM_Sans({
@@ -29,6 +29,10 @@ export default function RootLayout({
                 className={`${geistSans.variable} antialiased`}
             >
                 <QueryProvider>
+                    <TopLoader
+                        color="#2563eb"
+                        easing="ease-in"
+                    />
                     {children}
                 </QueryProvider>
             </body>

@@ -41,7 +41,7 @@ const Hero = () => {
               />
 
               {/* Beautiful Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/50 flex flex-col items-center justify-center text-center px-4">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-blue-950/70 flex flex-col items-center justify-center text-center px-4">
                 <h1 className="text-white text-4xl md:text-6xl font-extrabold drop-shadow-lg">
                   Find Your Dream House for Rent
                 </h1>

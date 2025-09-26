@@ -32,6 +32,9 @@ import {
 import { PasswordInput } from "@/components/ui/password-input"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link";
+import { useMutation } from "@tanstack/react-query";
+import { signUpApi } from "@/lib/auth";
+import { Loader2 } from "lucide-react";
 
 
 const formSchema = z.object({
@@ -48,19 +51,25 @@ export default function SignUpformBody() {
 
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const signUpMutation = useMutation({
+    mutationFn: signUpApi,
+    onSuccess: (data) => {
+      toast.success(data.message || "User created successfully");
+    },
+    onError: (error) => {
+      toast.error(error.message || "Failed to create user");
+    },
+  });
+
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      console.log(values);
-      toast(
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      );
+      await signUpMutation.mutateAsync(values);
     } catch (error) {
       console.error("Form submission error", error);
       toast.error("Failed to submit the form. Please try again.");
     }
-  }
+  };
 
   return (
     <Card className="w-full ">
@@ -168,7 +177,7 @@ export default function SignUpformBody() {
               </div>
             </div>
 
-            <Button type="submit" className="w-full bg-gradient-to-br from-black to-blue-950 hover:bg-gradient-to-br hover:from-black hover:to-blue-950/80">Submit</Button>
+            <Button type="submit" className="w-full bg-gradient-to-br from-black to-blue-950 hover:bg-gradient-to-br hover:from-black hover:to-blue-950/80">Sign Up {signUpMutation.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}</Button>
           </form>
         </Form>
         <p className="text-center text-sm text-gray-500 font-medium">Already have an account? <Link href="/login" className="text-blue-500">Login</Link></p>
