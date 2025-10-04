@@ -2,40 +2,35 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/provider/query-provider";
-import TopLoader from 'nextjs-toploader'
-
+import TopLoader from "nextjs-toploader";
+import { Toaster } from "sonner";
 
 const geistSans = DM_Sans({
-    subsets: ["latin"],
-    variable: "--font-geist-sans",
-    display: "swap",
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-
 export const metadata: Metadata = {
-    title: "House Lagbe",
-    description: "House Lagbe is a platform for renting houses.",
+  title: "House Lagbe",
+  description: "House Lagbe is a platform for renting houses.",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en">
-            <body
-                className={`${geistSans.variable} antialiased`}
-            >
-                <QueryProvider>
-                    <TopLoader
-                        color="#2563eb"
-                        easing="ease-in"
-                    />
-                    {children}
-                </QueryProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={`${geistSans.variable} antialiased`}>
+        <QueryProvider>
+          <TopLoader color="#2563eb" easing="ease-in" />
+          <Toaster />
+          {children}
+        </QueryProvider>
+      </body>
+    </html>
+  );
 }
