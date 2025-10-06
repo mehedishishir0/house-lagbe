@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BlogComponent = () => {
-    const 
+
   return (
     <div>
       
