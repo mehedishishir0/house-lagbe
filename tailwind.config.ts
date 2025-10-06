@@ -22,7 +22,9 @@ const config: Config = {
 					"2xl": "1550px",
 				},
 			},
+			
 			colors: {
+			    
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
